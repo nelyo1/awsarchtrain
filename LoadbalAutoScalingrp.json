@@ -256,7 +256,7 @@
             "files" : {
               "/var/www/html/index.html" : {
                 "content" : { "Fn::Join" : ["\n", [
-                  "<img src=\"https://awsarchsolution.s3.eu-west-1.amazonaws.com/Accesstier+LLC-01.jpg\" alt=\"AWS CloudFormation Logo\"/>",
+                  "<img src=\"", {"Fn::FindInMap" : ["Region2Examples", {"Ref" : "AWS::Region"}, "Examples"]}, "/cloudformation_graphic.png\" alt=\"AWS CloudFormation Logo\"/>",
                   "<h1>Congratulations, you have successfully launched your second AWS CloudFormation Template in the AWS Solution Arch Training class.</h1>"
                 ]]},
                 "mode"    : "000644",
